@@ -7,7 +7,9 @@ No menus: the page boots straight into the intro and the opening faceoff.
 
 - `DESIGN.md` is the spec (gameplay rules, rendering, HUD, audio). Keep it in sync when you change
   documented behavior or numbers.
-- `README.md` has controls, URL params and the full testing-tools table.
+- `README.md` has controls and URL params.
+- `TESTING_TOOLS.md` has test mode, every test/harness command, the typecheck configs, and the
+  runtime hooks tests rely on. Add new harnesses to its Commands table.
 
 ## Commands
 
