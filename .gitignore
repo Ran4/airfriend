@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+*.tsbuildinfo
+.vite/
+
+# test-harness screenshots, renders and scratch output (regenerable)
+tools/out/
+
+# local env / secrets (none are used, but never commit them)
+.env
+.env.*
+*.local
+
+# logs
+*.log
+npm-debug.log*
+
+# editors / OS
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# python (tools/*.py are run with uv)
+__pycache__/
+.venv/

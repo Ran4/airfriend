@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CHARACTER CHECKS</title>
+    <style>
+      body { margin: 0; padding: 8px; background: #101018; color: #d8d8e8; font: 11px monospace; }
+      #status { margin-bottom: 6px; color: #f8d848; }
+      pre { color: #a8e8a8; }
+    </style>
+  </head>
+  <body>
+    <div id="status">rendering...</div>
+    <pre id="table"></pre>
+    <script type="module">
+      import { characterChecks } from './audio-character.ts';
+      const status = document.getElementById('status');
+      characterChecks().then(
+        (r) => {
+          window.__characterReport = r;
+          document.getElementById('table').textContent = r.table;
+          status.textContent = r.failures.length ? `${r.failures.length} failures :: ${r.failures.join(' | ')}` : 'all character checks pass';
+        },
+        (e) => {
+          window.__characterReport = { failures: [`threw: ${e.message}`] };
+          status.textContent = `threw: ${e.message}`;
+        },
+      );
+    </script>
+  </body>
+</html>

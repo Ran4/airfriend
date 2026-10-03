@@ -1,0 +1,13 @@
+[
+  {"t": 5.0, "key": "ArrowUp", "action": "down"},
+  {"t": 5.3, "key": "ArrowLeft", "action": "down"},
+  {"t": 6.0, "key": "KeyC", "action": "down"},
+  {"t": 6.8, "key": "KeyC", "action": "up"},
+  {"t": 7.0, "key": "ArrowLeft", "action": "up"},
+  {"t": 7.2, "key": "KeyX", "action": "press"},
+  {"t": 7.6, "key": "KeyZ", "action": "down"},
+  {"t": 8.2, "key": "KeyZ", "action": "up"},
+  {"t": 8.5, "key": "KeyC", "action": "press"},
+  {"t": 8.8, "key": "KeyX", "action": "press"},
+  {"t": 9.0, "key": "ArrowUp", "action": "up"}
+]

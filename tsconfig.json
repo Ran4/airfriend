@@ -1,0 +1,14 @@
+{
+  // What plain `npx tsc --noEmit` (and editors) check: the game plus the
+  // maintained test harnesses in tools/, with Node types for the harnesses.
+  //
+  // tools/qa-* are throwaway QA probes: kept as repros, never typechecked here,
+  // so a stale probe cannot turn this check (or `npm run build`) red.
+  // Check them on demand with `npm run typecheck:qa` (tsconfig.qa.json).
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["src", "tools/*.ts", "vite.config.ts"],
+  "exclude": ["tools/qa-*"]
+}

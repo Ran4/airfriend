@@ -1,0 +1,27 @@
+{
+  "name": "airfriend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.app.json --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "typecheck:app": "tsc -p tsconfig.app.json --noEmit",
+    "typecheck:qa": "tsc -p tsconfig.qa.json --noEmit",
+    "sim": "tsx tools/simulate.ts",
+    "playtest": "node tools/playtest.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/three": "^0.186.0",
+    "playwright": "^1.63.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  }
+}

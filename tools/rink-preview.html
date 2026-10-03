@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RINK preview</title>
+    <style>
+      html, body { margin: 0; background: #000; }
+      #screen { position: relative; width: 768px; height: 672px; }
+      #screen canvas { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; }
+    </style>
+  </head>
+  <body>
+    <div id="screen"></div>
+    <script type="module" src="/tools/rink-preview.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HUD preview</title>
+    <style>
+      body { margin: 0; background: #222; color: #ccc; font: 12px monospace; }
+      #grid { display: flex; flex-wrap: wrap; gap: 0; }
+      figure { margin: 0 0 6px 0; width: 512px; }
+      canvas { width: 512px; height: 448px; image-rendering: pixelated; display: block; }
+      figcaption { padding: 2px 4px; }
+    </style>
+  </head>
+  <body>
+    <div id="grid"></div>
+    <script type="module" src="./hud-preview.ts"></script>
+  </body>
+</html>

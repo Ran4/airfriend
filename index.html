@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIR FRIEND HOCKEY</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+      /* #screen gets the 4:3 picture's rect (CSS px) from src/core/display.ts.
+         What you see is canvas.display: fixed over the whole viewport with one
+         backing pixel per device pixel, the picture drawn into it at whole
+         device pixels (integer rows, sharp-bilinear 8:7 columns, black border). */
+      #screen { position: absolute; left: 0; top: 0; background: #000; }
+      /* the 256x224 3D + HUD canvases are only sources for the composite */
+      #screen canvas { position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; }
+      #screen canvas.display { display: block; }
+      /* device-row scanlines, drawn by display.ts */
+      #crt { pointer-events: none; }
+      #screen.crt canvas#crt { display: block; }
+      /* 1:1 already; if a browser is a pixel off, stay sharp rather than blur */
+      #screen canvas.display, #crt { image-rendering: pixelated; image-rendering: crisp-edges; }
+      /* fullscreen (F / double-click) is a TV: no mouse cursor on it */
+      html:fullscreen, html:fullscreen * { cursor: none; }
+    </style>
+  </head>
+  <body>
+    <div id="screen"><canvas id="crt"></canvas></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

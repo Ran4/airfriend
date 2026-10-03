@@ -1,0 +1,7 @@
+{
+  // Opt-in: everything in tsconfig.json plus the throwaway tools/qa-* probes.
+  // Informational only; probes are allowed to rot, so this may fail.
+  "extends": "./tsconfig.json",
+  "include": ["src", "tools/*.ts", "vite.config.ts"],
+  "exclude": []
+}
